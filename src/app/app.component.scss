@@ -1,0 +1,81 @@
+$file-drop-border-width: 15px;
+
+canvas {
+  display: none;
+  position: absolute;
+}
+
+#inner-container {
+  width: 30em;
+
+  & #console-container {
+    height: 15em;
+  }
+}
+
+#title-container {
+  text-align: center;
+  padding: 0;
+  margin-bottom: 2em;
+
+  & p {
+    font-weight: 600;
+    line-height: 1.6rem;
+  }
+}
+
+#file-drop-box-container {
+  cursor: pointer;
+  height: 15em;
+  margin-bottom: 2em;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition-duration: 0.2s;
+
+  & div {
+    border: #FEFEFE;
+    border-radius: $file-drop-border-width;
+    border-width: $file-drop-border-width;
+    border-style: dashed;
+    height: calc(100% - 2 * $file-drop-border-width);
+    width: 100%;
+
+    // Arrow
+    & > strong {
+      position: absolute;
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 1em;
+      transform: rotate(90deg);
+      transition-duration: 0.5s;
+    }
+
+    // Text
+    & > p {
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-top: 4em;
+    }
+  }
+}
+
+#file-drop-box-container:hover {
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(18, 18, 18, 0.25) 0px 54px 55px, rgba(18, 18, 18, 0.12) 0px -12px 30px, rgba(18, 18, 18, 0.12) 0px 4px 6px, rgba(18, 18, 18, 0.17) 0px 12px 13px, rgba(18, 18, 18, 0.09) 0px -3px 5px;
+
+  & div {
+    // Arrow
+    & > strong {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+#console-text-area {
+  width: 100%;
+  height: 100%;
+  color: #FEFEFE;
+}

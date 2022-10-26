@@ -1,4 +1,19 @@
-<input type="file" (change)="uploadFile($event)">
-<input #WidthInput type="text">
-<input #HeightInput type="text">
+<div id="outer-container" class="flex-row full-height full-width justify-center align-items-center">
+  <div id="inner-container" class="flex-column">
+    <div id="title-container">
+      <h1>that's a fancy frame</h1>
+      <a class="github-button" href="https://github.com/cppshane/framr" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a>
+    </div>
+    <div id="file-drop-box-container" (drop)="onDrop($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (click)="openFileSelector()">
+      <div class="flex-column justify-center align-items-center">
+        <strong>&#x279C;</strong>
+        <p>drop your videos here m8</p>
+      </div>
+    </div>
+    <div id="console-container">
+      <textarea #ConsoleTextArea id="console-text-area" readonly>{{ log }}</textarea>
+    </div>
+  </div>
+</div>
+
 <canvas id="canvas">

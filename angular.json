@@ -29,7 +29,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/@ffmpeg/ffmpeg/dist/ffmpeg.min.js"
+              "node_modules/@ffmpeg/ffmpeg/dist/ffmpeg.min.js",
+              "src/assets/js/buttons.min.js"
             ]
           },
           "configurations": {
@@ -98,7 +99,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/@ffmpeg/ffmpeg/dist/ffmpeg.min.js"
+              "node_modules/@ffmpeg/ffmpeg/dist/ffmpeg.min.js",
+              "src/assets/js/buttons.min.js"
             ]
           }
         }

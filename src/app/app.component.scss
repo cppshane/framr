@@ -22,6 +22,10 @@ canvas {
     font-weight: 600;
     line-height: 1.6rem;
   }
+
+  & h1 {
+    margin-bottom: 0.4em;
+  }
 }
 
 #file-drop-box-container {

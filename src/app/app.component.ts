@@ -26,6 +26,7 @@ export class AppComponent {
   frameRatio = 0.9375;
   ffmpeg: any;
   log = '';
+  dragging = false;
   consoleTextAreaElement?: HTMLTextAreaElement | null;
   canvasElement?: HTMLCanvasElement | null;
   videoElement?: HTMLVideoElement | null;
@@ -70,7 +71,10 @@ export class AppComponent {
     event.preventDefault();
     event.stopPropagation();
 
-    let files = event?.dataTransfer?.files[0];
+    let files = event?.dataTransfer?.files;
+    if (files) {
+      this.processFiles(files);
+    }
   }
 
   async processFiles(files: FileList) {
@@ -175,10 +179,14 @@ export class AppComponent {
   onDragOver(event: DragEvent) {
     event.preventDefault();
     event.stopPropagation();
+    
+    this.dragging = true;
   }
 
   onDragLeave(event: DragEvent) {
     event.preventDefault();
     event.stopPropagation();
+
+    this.dragging = false;
   }
 }

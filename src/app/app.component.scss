@@ -78,6 +78,18 @@ canvas {
   }
 }
 
+.file-drop-dragging {
+  background: rgba(0, 0, 0, 0.4) !important;
+  box-shadow: rgba(18, 18, 18, 0.25) 0px 54px 55px, rgba(18, 18, 18, 0.12) 0px -12px 30px, rgba(18, 18, 18, 0.12) 0px 4px 6px, rgba(18, 18, 18, 0.17) 0px 12px 13px, rgba(18, 18, 18, 0.09) 0px -3px 5px !important;
+
+  & div {
+    // Arrow
+    & > strong {
+      margin-bottom: 0.5em !important;
+    }
+  }
+}
+
 #console-text-area {
   width: 100%;
   height: 100%;

@@ -39,6 +39,12 @@ h1 {
   margin-bottom: 0.2em;
 }
 
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem; 
+  }
+}
+
 p {
   color: #FEFEFE;
   font-family: 'Montserrat', sans-serif;

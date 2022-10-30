@@ -75,6 +75,8 @@ export class AppComponent {
     if (files) {
       this.processFiles(files);
     }
+
+    this.dragging = false;
   }
 
   async processFiles(files: FileList) {

@@ -149,10 +149,8 @@ export class AppComponent {
 
     // Begin processing
     let outputName = 'framed_' + video.File.name;
-    await this.ffmpeg.run('-i', video.File.name, '-vf', 'scale=' + innerWidth + ':' + innerHeight, '-preset', 'slow', '-crf', '18', 'inner-clip.mp4');
-    await this.ffmpeg.run('-i', video.File.name, '-vf', 'boxblur=30', '-c:a', 'copy', 'outer-clip.mp4');
-    await this.ffmpeg.run('-i', 'outer-clip.mp4', '-i', 'shadow.png', '-filter_complex', 'overlay', 'shadow-clip.mp4');
-    await this.ffmpeg.run('-i', 'shadow-clip.mp4', '-i', 'inner-clip.mp4', '-filter_complex', 'overlay=' + x + ':' + y, outputName);
+    await this.ffmpeg.run('-i', video.File.name, '-i', 'shadow.png', '-filter_complex', 
+    '[0]boxblur=30[a];[a][1]overlay[b];[0]scale=' + innerWidth + ':' + innerHeight + '[c];[b][c]overlay=' + x + ':' + y, '-preset', 'slow', '-crf', '18', outputName);
 
     // Download result
     const data = this.ffmpeg.FS('readFile', outputName);

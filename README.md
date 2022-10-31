@@ -1,27 +1,8 @@
 # Framr
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+I wrote an <a href="https://github.com/cppshane/framr-script">FFmpeg script</a> to give the coding portions of my <a href="https://www.youtube.com/channel/UCYLo70tzoGibx13p9AjddfA">YouTube videos</a> a nice blur shadow effect. And then I realized somebody compiled FFmpeg to WebAssembly so it can run in the browser. And here we are.
 
-## Development server
+![framr-demo](https://user-images.githubusercontent.com/6633831/198922270-d7dff5eb-1fbc-41d2-a557-9b432078a4de.gif)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Note: FFmpeg is much, much slower on the browser like this.

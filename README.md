@@ -5,4 +5,4 @@ I wrote an <a href="https://github.com/cppshane/framr-script">FFmpeg script</a> 
 ![framr-demo](https://user-images.githubusercontent.com/6633831/198922270-d7dff5eb-1fbc-41d2-a557-9b432078a4de.gif)
 
 
-Note: FFmpeg is much, much slower on the browser like this.
+Note: FFmpeg is much, much slower on the browser like this. I recommend using the <a href="https://github.com/cppshane/framr-script">original ffmpeg bash script</a> if you need to process large/many files.

@@ -4,7 +4,7 @@ I wrote an <a href="https://github.com/cppshane/framr-script">FFmpeg script</a> 
 
 Here is an example of what the frame looks like:
 
-![framr-demo](cdn.shaneduffy.io/blog/framr-demo.gif)
+![framr-demo](https://cdn.shaneduffy.io/blog/framr-demo.gif)
 
 
 Note: FFmpeg is much, much slower on the browser like this. I recommend using the <a href="https://github.com/cppshane/framr-script">original ffmpeg bash script</a> if you need to process large/many files.
